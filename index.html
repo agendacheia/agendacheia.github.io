@@ -387,6 +387,62 @@
   .inv-lista ul li:last-child { border-bottom: none; }
   .inv-check { color: var(--rosa); font-weight: 700; flex-shrink: 0; }
 
+  /* PLANOS ESCALÁVEIS */
+  .planos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 900px) { .planos-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .planos-grid { grid-template-columns: 1fr; } }
+
+  .plano-card {
+    background: var(--lilas-suave);
+    border-radius: 16px;
+    padding: 1.75rem;
+    border: 1px solid rgba(147,51,234,0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .plano-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(147,51,234,0.15);
+  }
+
+  .plano-titulo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--escuro);
+  }
+
+  .plano-titulo span {
+    background: linear-gradient(135deg, var(--roxo-medio), var(--rosa));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .plano-desc {
+    font-size: 0.88rem;
+    color: var(--medio);
+    line-height: 1.6;
+  }
+
+  .plano-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--rosa);
+    text-decoration: none;
+  }
+
   /* CTA FINAL */
   .cta-final {
     background: linear-gradient(135deg, var(--roxo) 0%, var(--rosa) 100%);
@@ -569,28 +625,54 @@
   </div>
 </section>
 
-<!-- INVESTIMENTO -->
+<!-- PLANOS ESCALÁVEIS -->
 <section class="investimento" id="investimento">
   <div class="container">
-    <div class="section-label">Investimento</div>
-    <h2 class="section-title">Gestão de Crescimento Digital</h2>
-    <p class="section-desc">Uma gestão completa — muito além do tráfego pago — por um valor acessível para pequenos negócios.</p>
+    <div class="section-label">Planos Escaláveis</div>
+    <h2 class="section-title">Soluções sob medida<br>para o seu momento</h2>
+    <p class="section-desc">Cada negócio tem um ponto de partida diferente. Por isso, os planos podem ser combinados de acordo com o que o seu momento exige.</p>
 
-    <div class="inv-box">
-      <div class="inv-preco">
-        <div class="inv-valor">R$890</div>
-        <div class="inv-periodo">/mês</div>
-        <div class="inv-obs">+ verba de anúncios diretamente na Meta (R$10–15/dia recomendado para início)</div>
+    <div class="planos-grid">
+      <div class="plano-card">
+        <div class="plano-titulo">Plano <span>Setup</span></div>
+        <div class="plano-desc">Configuração técnica completa da estrutura de tráfego pago do seu negócio. A fundação que sustenta todos os outros.</div>
+        <a href="#contato" class="plano-link">Ver plano →</a>
       </div>
-      <div class="inv-lista">
-        <ul>
-          <li><span class="inv-check">✓</span> Seu negócio aparece para quem já está procurando o que você oferece</li>
-          <li><span class="inv-check">✓</span> Comunicação que fala direto com o seu cliente ideal</li>
-          <li><span class="inv-check">✓</span> Primeiros contatos qualificados ainda nas primeiras semanas</li>
-          <li><span class="inv-check">✓</span> Você para de depender só de indicação e começa a controlar seu crescimento</li>
-          <li><span class="inv-check">✓</span> Relatório mensal claro: o que está funcionando e o que estamos ajustando</li>
-          <li><span class="inv-check">✓</span> Você foca em atender — eu cuido de fazer os clientes chegarem até você</li>
-        </ul>
+
+      <div class="plano-card">
+        <div class="plano-titulo">Plano <span>Google Meu Negócio</span></div>
+        <div class="plano-desc">Configuração e gestão mensal do Google Business Profile para negócios locais aparecerem nas buscas do Google Maps.</div>
+        <a href="#contato" class="plano-link">Ver plano →</a>
+      </div>
+
+      <div class="plano-card">
+        <div class="plano-titulo">Plano <span>Google Search</span></div>
+        <div class="plano-desc">Campanhas de busca no Google Ads para capturar pessoas que já estão ativamente procurando pelo produto ou serviço.</div>
+        <a href="#contato" class="plano-link">Ver plano →</a>
+      </div>
+
+      <div class="plano-card">
+        <div class="plano-titulo">Plano <span>WhatsApp Ads</span></div>
+        <div class="plano-desc">Campanhas Click-to-WhatsApp no Meta Ads para gerar conversas qualificadas diretamente no WhatsApp do seu negócio.</div>
+        <a href="#contato" class="plano-link">Ver plano →</a>
+      </div>
+
+      <div class="plano-card">
+        <div class="plano-titulo">Plano <span>Seguidores</span></div>
+        <div class="plano-desc">Campanhas de tráfego no Instagram para crescer uma audiência quente e qualificada. Venda como consequência.</div>
+        <a href="#contato" class="plano-link">Ver plano →</a>
+      </div>
+
+      <div class="plano-card">
+        <div class="plano-titulo">Plano <span>Panfletagem</span></div>
+        <div class="plano-desc">Campanhas de Visualização de Vídeo e Alcance para panfletar digitalmente a oferta do seu negócio para o maior número de pessoas.</div>
+        <a href="#contato" class="plano-link">Ver plano →</a>
+      </div>
+
+      <div class="plano-card">
+        <div class="plano-titulo">Plano <span>Pacote de Criativos</span></div>
+        <div class="plano-desc">Pacote mensal de criativos estratégicos para campanhas de tráfego pago. Scripts, roteiros e especificações técnicas.</div>
+        <a href="#contato" class="plano-link">Ver plano →</a>
       </div>
     </div>
   </div>
